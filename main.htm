@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COCOMO Model</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="whole">
+        <div class="right-half edges">
+            <img src="logo.png">
+            <ul class="model">
+                <li><button class="basicM field">Basic Model</button></li>
+                <li><button class="interM field">Intermediate Model</button></li>
+            </ul>
+        </div>
+
+        <!-- --------------------------------------------------------------------------- -->
+        <div class="left-half edges">
+            
+            <ul class="Input1">
+                <h1>Input:</h1>
+                <p class="loc">Lines of Code(KLOC):</p>
+                <li class="loc"><input type="text" id="klocB" value="0"></input></li>
+                <li class="loc cal"><button id="CalculateB" value="1">Calculate</button></li>
+            </ul>
+            <!-- ----------------------------------------------------------------------- -->
+            <ul class="Input2">
+                <h1>Input:</h1>
+                <p class="loc">Lines of Code(KLOC): </p>
+                <li class="loc"><input type="text" id="klocI" value="0"></input></li>
+                <li class="loc cal"><button id="CalculateI" value=2>Calculate</button></li>
+
+                <table class="eaf">
+
+
+                    <tr>
+                        <th></th>
+                        <th>VL</th>
+                        <th>L</th>
+                        <th>N</th>
+                        <th>H</th>
+                        <th>VH</th>
+                        <th>XH</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Physical Attributes</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Required Reliability:</td>
+                        <td><input type="radio" name="rr" value="0" class="eaf-v"></td>
+                        <td><input type="radio" name="rr" value="1" class="eaf-v"></td>
+                        <td><input type="radio" name="rr" value="2" class="eaf-v"></td>
+                        <td><input type="radio" name="rr" value="3" class="eaf-v"></td>
+                        <td><input type="radio" name="rr" value="4" class="eaf-v"></td>
+                        <td><input type="radio" name="rr" value="5" class="eaf-v"></td>
+                    </tr>
+                    <tr>
+                        <td>Database Size:</td>
+                        <td><input type="radio" name="ds" value="0" class="eaf-v"></td>
+                        <td><input type="radio" name="ds" value="1" class="eaf-v"></td>
+                        <td><input type="radio" name="ds" value="2" class="eaf-v"></td>
+                        <td><input type="radio" name="ds" value="3" class="eaf-v"></td>
+                        <td><input type="radio" name="ds" value="4" class="eaf-v"></td>
+                        <td><input type="radio" name="ds" value="5" class="eaf-v"></td>
+                    </tr>
+                    <tr>
+                        <td>Product Complexity:</td>
+                        <td><input type="radio" name="pc" value="0" class="eaf-v"></td>
+                        <td><input type="radio" name="pc" value="1" class="eaf-v"></td>
+                        <td><input type="radio" name="pc" value="2" class="eaf-v"></td>
+                        <td><input type="radio" name="pc" value="3" class="eaf-v"></td>
+                        <td><input type="radio" name="pc" value="4" class="eaf-v"></td>
+                        <td><input type="radio" name="pc" value="5" class="eaf-v"></td>
+                    </tr>
+                    <!-- ------------------------------------------------------------------------------------ -->
+                    <tr>
+                        <td>
+                            <h4>Hardware Attributes</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Execution Time Constraint:</td>
+                        <td><input type="radio" name="et" value="0" class="eaf-v"></td>
+                        <td><input type="radio" name="et" value="1" class="eaf-v"></td>
+                        <td><input type="radio" name="et" value="2" class="eaf-v"></td>
+                        <td><input type="radio" name="et" value="3" class="eaf-v"></td>
+                        <td><input type="radio" name="et" value="4" class="eaf-v"></td>
+                        <td><input type="radio" name="et" value="5" class="eaf-v"></td>
+                    </tr>
+                    <tr>
+                        <td>Main Storage Constraint:</td>
+                        <td><input type="radio" name="ms" value="0" class="eaf-v"></td>
+                        <td><input type="radio" name="ms" value="1" class="eaf-v"></td>
+                        <td><input type="radio" name="ms" value="2" class="eaf-v"></td>
+                        <td><input type="radio" name="ms" value="3" class="eaf-v"></td>
+                        <td><input type="radio" name="ms" value="4" class="eaf-v"></td>
+                        <td><input type="radio" name="ms" value="5" class="eaf-v"></td>
+                    </tr>
+                    <tr>
+                        <td>Platform Volatility:</td>
+                        <td><input type="radio" name="pv" value="0" class="eaf-v"></td>
+                        <td><input type="radio" name="pv" value="1" class="eaf-v"></td>
+                        <td><input type="radio" name="pv" value="2" class="eaf-v"></td>
+                        <td><input type="radio" name="pv" value="3" class="eaf-v"></td>
+                        <td><input type="radio" name="pv" value="4" class="eaf-v"></td>
+                        <td><input type="radio" name="pv" value="5" class="eaf-v"></td>
+                    </tr>
+                    <tr>
+                        <td>Computer Turnaround Time:</td>
+                        <td><input type="radio" name="ct" value="0" class="eaf-v"></td>
+                        <td><input type="radio" name="ct" value="1" class="eaf-v"></td>
+                        <td><input type="radio" name="ct" value="2" class="eaf-v"></td>
+                        <td><input type="radio" name="ct" value="3" class="eaf-v"></td>
+                        <td><input type="radio" name="ct" value="4" class="eaf-v"></td>
+                        <td><input type="radio" name="ct" value="5" class="eaf-v"></td>
+                    </tr>
+                    <!-- ----------------------------------------------------------------------------------- -->
+                    <tr>
+                        <td>
+                            <h4>Project Attributes</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Modern Programming Practices:</td>
+                        <td><input type="radio" name="mp" value="0" class="eaf-v"></td>
+                        <td><input type="radio" name="mp" value="1" class="eaf-v"></td>
+                        <td><input type="radio" name="mp" value="2" class="eaf-v"></td>
+                        <td><input type="radio" name="mp" value="3" class="eaf-v"></td>
+                        <td><input type="radio" name="mp" value="4" class="eaf-v"></td>
+                        <td><input type="radio" name="mp" value="5" class="eaf-v"></td>
+                    </tr>
+                    <tr>
+                        <td>Use of Software Tools:</td>
+                        <td><input type="radio" name="uos" value="0" class="eaf-v"></td>
+                        <td><input type="radio" name="uos" value="1" class="eaf-v"></td>
+                        <td><input type="radio" name="uos" value="2" class="eaf-v"></td>
+                        <td><input type="radio" name="uos" value="3" class="eaf-v"></td>
+                        <td><input type="radio" name="uos" value="4" class="eaf-v"></td>
+                        <td><input type="radio" name="uos" value="5" class="eaf-v"></td>
+                    </tr>
+                    <tr>
+                        <td>Required Development Practices:</td>
+                        <td><input type="radio" name="rd" value="0" class="eaf-v"></td>
+                        <td><input type="radio" name="rd" value="1" class="eaf-v"></td>
+                        <td><input type="radio" name="rd" value="2" class="eaf-v"></td>
+                        <td><input type="radio" name="rd" value="3" class="eaf-v"></td>
+                        <td><input type="radio" name="rd" value="4" class="eaf-v"></td>
+                        <td><input type="radio" name="rd" value="5" class="eaf-v"></td>
+                    </tr>
+                </table>
+            </ul>
+            <!-- ------------------------------------------------------------------------- -->
+            <ul class="Result">
+                <h1>Result: </h1>
+                <li class="mode"></li>
+                <li class="effort"></li>
+                <li class="devtime"></li>
+                <li class="staff"></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

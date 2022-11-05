@@ -1,0 +1,165 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    color: aliceblue;
+    font-family: 'Kanit', sans-serif;
+}
+
+img {
+    height: 100px;
+    width: 276px;
+}
+
+ul {
+    list-style: none;
+}
+h1 {
+    margin: 0px 0px 10px 0px;
+}
+th {
+    padding: 0px 10px 0px 10px;
+    color: rgb(158, 153, 240);
+}
+td{
+    text-align: center;
+}
+h4 {
+    padding: 0px 0px 4px 0px;
+    border: none;
+    border-bottom: solid 1px #bdbdbd;
+    color: rgb(158, 153, 240);
+}
+input{
+    outline:none;
+}
+
+.whole {
+    display: flex;
+
+}
+
+.right-half.edges {
+    padding: 17px 0px 0px 0px;
+    background: #2a2b2f;
+    padding-bottom: 40%;
+}
+
+.left-half.edges {
+    background: url(background.png),#2f3237;
+    background-position: 48% 33%;
+    background-size: 45%;
+    background-repeat: no-repeat;
+    padding: 13px 85px 0px 32px;
+    width: 100%;
+}
+.Input1 {
+    display: none;
+    margin: 24px 0px 0px 8px;
+    background: #353941d1;
+    border-radius: 10px;
+    padding: 3px 0px 24px 17px;
+}
+.Input2{
+    display: none;
+    margin: 24px 0px 0px 8px;
+    background: #353941d1;
+    border-radius: 10px;
+    padding: 3px 0px 24px 17px;
+}
+
+
+
+button.interM {
+    background: #37393c;
+    padding: 21px 43px;
+    font-size: 22px;
+    border: none;
+}
+
+button.basicM {
+    background: #37393c;
+    padding: 21px 80px;
+    font-size: 22px;
+    border: none;
+    border-bottom: solid 2px #2a2b2f;
+    margin: 27px 0px 0px 0px;
+}
+
+.model button:hover {
+    background: rgb(158, 153, 240);
+    transition: 0.2s all ease-in;
+    color: black;
+    cursor: pointer;
+
+}
+li.loc {
+    display: contents;
+}
+input#klocB {
+    padding: 5px 56px 0px 3px;
+    border: none;
+    border-bottom: solid 1px;
+    background: #484a4f87;
+    font-size: 19px;
+}
+input#klocI {
+    padding: 5px 56px 0px 3px;
+    border: none;
+    border-bottom: solid 1px;
+    background: #484a4f87;
+    font-size: 19px;
+}
+input#kloc:active{
+    background: #484a4f87;
+}
+button#CalculateB {
+    background: #4c95ed;
+    padding: 8px 19px;
+    margin: -2px 0px 0px 14px;
+    font-size: medium;
+    display: inline-flex;
+    position: absolute;
+    border: none;
+    border-radius: 4px;
+}
+button#CalculateI {
+    background: #4c95ed;
+    padding: 8px 19px;
+    margin: -2px 0px 0px 14px;
+    font-size: medium;
+    display: inline-flex;
+    position: absolute;
+    border: none;
+    border-radius: 4px;
+}
+
+tr>:nth-child(1) {
+    text-align: -webkit-left;
+}
+
+table.eaf {
+    margin: 25px 0px;
+}
+.Result{
+    display: none;
+    margin: 24px 0px 0px 8px;
+    background: #353941d1;
+    border-radius: 10px;
+    padding: 3px 0px 24px 17px;
+}
+@keyframes fadein{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:0.96;
+    }
+}
+@keyframes fadeout{
+    0%{
+        opacity:0.96;
+    }
+    100%{
+        opacity:0;
+    }
+}
